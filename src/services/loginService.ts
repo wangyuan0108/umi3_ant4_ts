@@ -1,11 +1,11 @@
 /*
  * @Author: wangyuan
  * @Date: 2020-08-21 17:48:22
- * @LastEditTime: 2020-08-21 17:54:03
+ * @LastEditTime: 2020-08-21 18:02:15
  * @LastEditors: wangyuan
  * @Description:
  */
-import { post } from './baseRequest';
+import { post } from '@/services/baseRequest';
 interface IResult<T> {
   data: T;
   success: string;
