@@ -1,12 +1,12 @@
 /*
  * @Author: wangyuan
  * @Date: 2020-07-01 09:51:16
- * @LastEditTime: 2020-08-21 16:17:14
+ * @LastEditTime: 2020-08-24 14:35:13
  * @LastEditors: wangyuan
  * @Description:
  */
 import { Effect, ImmerReducer, Reducer, Subscription } from 'umi';
-import {login} from '../api/api'
+import {login} from '@/services/loginService'
 export interface IndexModelState {
   name: string;
 }

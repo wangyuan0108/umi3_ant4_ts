@@ -1,7 +1,7 @@
 /*
  * @Author: wangyuan
  * @Date: 2020-06-11 17:41:05
- * @LastEditTime: 2020-08-20 22:14:55
+ * @LastEditTime: 2020-08-24 14:42:20
  * @LastEditors: wangyuan
  * @Description:
  */
@@ -21,12 +21,21 @@ export default defineConfig({
   },
   proxy: {
     '/api': {
-      'target': 'https://pre.xbeilu.com/',
-      'changeOrigin': true,
-      'pathRewrite': { '^/api' : '' },
+      target: 'https://pre.xbeilu.com/',
+      changeOrigin: true,
+      pathRewrite: { '^/api': '' },
     },
   },
   routes: [
+    {
+      name: 'login',
+      path: '/login',
+      component: '@/pages/login',
+      layout: {
+        hideNav: true,
+        hideMenu: true,
+      },
+    },
     {
       name: 'home',
       path: '/',
@@ -35,15 +44,15 @@ export default defineConfig({
         icon: 'setting',
         name: '权限管理',
       },
-      routes: [
-        {
-          path: 'list',
-          component: '@/pages/test',
-          menu: {
-            name: '账户列表',
-          },
-        },
-      ],
+      // routes: [
+      //   {
+      //     path: 'list',
+      //     component: '@/pages/test',
+      //     menu: {
+      //       name: '账户列表',
+      //     },
+      //   },
+      // ],
     },
     // {
     //   path: 'user',
