@@ -1,11 +1,11 @@
 /*
  * @Author: wangyuan
  * @Date: 2020-07-01 09:51:16
- * @LastEditTime: 2020-08-24 15:06:40
+ * @LastEditTime: 2020-09-08 17:03:15
  * @LastEditors: wangyuan
  * @Description:
  */
-import { Effect, ImmerReducer, Reducer, Subscription } from 'umi';
+import { Effect, ImmerReducer, Reducer, Subscription,history } from 'umi';
 import { login } from '@/services/loginService';
 export interface LoginModelState {
   name: string;
@@ -33,9 +33,10 @@ const LoginModel: LoginModelType = {
   },
   effects: {
     *login({ payload }, { call, put }) {
-      // const a = yield call(login, payload);
+      let res = yield call(login, payload);
+      debugger
       yield put({ type: 'save', payload: { name: 'admin' } });
-      // console.log('pathname====a', a);
+      history.push('/')
     },
   },
   reducers: {

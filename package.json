@@ -24,6 +24,7 @@
     "@ant-design/icons": "^4.2.2",
     "@ant-design/pro-layout": "^5.0.15",
     "@sentry/react": "^5.21.1",
+    "@umijs/plugin-qiankun": "^2.11.0",
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.2.3",
     "classnames": "^2.2.6",

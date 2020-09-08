@@ -1,7 +1,7 @@
 /*
  * @Author: wangyuan
  * @Date: 2020-07-01 09:51:16
- * @LastEditTime: 2020-08-24 14:35:13
+ * @LastEditTime: 2020-08-25 15:41:16
  * @LastEditors: wangyuan
  * @Description:
  */
@@ -31,11 +31,10 @@ const IndexModel: IndexModelType = {
   },
   effects: {
     *query({ payload }, { call, put }) {
-      const a = yield call(
-        login,
-        payload,
-      )
-      console.log('pathname====a',a);
+      // const a = yield call(
+      //   login,
+      //   payload,
+      // )
     },
   },
   reducers: {

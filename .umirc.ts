@@ -1,7 +1,7 @@
 /*
  * @Author: wangyuan
  * @Date: 2020-06-11 17:41:05
- * @LastEditTime: 2020-08-24 14:42:20
+ * @LastEditTime: 2020-09-08 15:15:11
  * @LastEditors: wangyuan
  * @Description:
  */
@@ -28,12 +28,21 @@ export default defineConfig({
   },
   routes: [
     {
-      name: 'login',
+      // name: 'login',
       path: '/login',
       component: '@/pages/login',
       layout: {
         hideNav: true,
         hideMenu: true,
+      },
+    },
+    {
+      name: 'dataView',
+      path: '/dataView',
+      component: '@/pages/dataView',
+      menu: {
+        icon: 'setting',
+        name: '数据展示',
       },
     },
     {
@@ -44,6 +53,10 @@ export default defineConfig({
         icon: 'setting',
         name: '权限管理',
       },
+
+      // routes: [
+
+      // ],
       // routes: [
       //   {
       //     path: 'list',
