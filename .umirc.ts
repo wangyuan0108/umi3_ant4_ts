@@ -1,7 +1,7 @@
 /*
  * @Author: wangyuan
  * @Date: 2020-06-11 17:41:05
- * @LastEditTime: 2020-09-08 15:15:11
+ * @LastEditTime: 2020-09-08 18:24:50
  * @LastEditors: wangyuan
  * @Description:
  */
@@ -15,9 +15,17 @@ export default defineConfig({
     hmr: false,
   },
   antd: {},
+  locale: {
+    antd: true,
+    title: true,
+  },
   layout: {
     name: '实验系统',
+    locale: true,
     logo: 'http://dinping.wangyuanweb.top/18-4-12/31903640.jpg',
+  },
+  theme: {
+    '@primary-color': '#1DA57A',
   },
   proxy: {
     '/api': {
@@ -37,35 +45,36 @@ export default defineConfig({
       },
     },
     {
+      name: 'home',
+      path: '/home',
+      component: '@/pages/index',
+      menu: {
+        icon: 'home',
+        name: 'home1',
+      },
+      routes: [
+        {
+          name: 'list',
+          path: '/list',
+          component: '@/pages/index',
+          menu: {
+            name: 'list',
+          },
+        },
+      ],
+    },
+    {
       name: 'dataView',
       path: '/dataView',
       component: '@/pages/dataView',
       menu: {
-        icon: 'setting',
+        icon: 'barChart',
         name: '数据展示',
       },
     },
     {
-      name: 'home',
       path: '/',
-      component: '@/pages/index',
-      menu: {
-        icon: 'setting',
-        name: '权限管理',
-      },
-
-      // routes: [
-
-      // ],
-      // routes: [
-      //   {
-      //     path: 'list',
-      //     component: '@/pages/test',
-      //     menu: {
-      //       name: '账户列表',
-      //     },
-      //   },
-      // ],
+      redirect: '/home',
     },
     // {
     //   path: 'user',
