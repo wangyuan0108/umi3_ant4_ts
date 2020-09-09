@@ -1,7 +1,7 @@
 /*
  * @Author: wangyuan
  * @Date: 2020-06-11 17:41:05
- * @LastEditTime: 2020-09-08 18:24:50
+ * @LastEditTime: 2020-09-09 15:24:45
  * @LastEditors: wangyuan
  * @Description:
  */
@@ -10,6 +10,7 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  // title: 'site.title',
   dva: {
     immer: true,
     hmr: false,
@@ -20,7 +21,7 @@ export default defineConfig({
     title: true,
   },
   layout: {
-    name: '实验系统',
+    // name: '实验系统',
     locale: true,
     logo: 'http://dinping.wangyuanweb.top/18-4-12/31903640.jpg',
   },
@@ -37,6 +38,7 @@ export default defineConfig({
   routes: [
     {
       // name: 'login',
+      title: 'login.title',
       path: '/login',
       component: '@/pages/login',
       layout: {
@@ -46,6 +48,7 @@ export default defineConfig({
     },
     {
       name: 'home',
+      title: 'home.title',
       path: '/home',
       component: '@/pages/index',
       menu: {
@@ -55,6 +58,7 @@ export default defineConfig({
       routes: [
         {
           name: 'list',
+          title: 'list.title',
           path: '/list',
           component: '@/pages/index',
           menu: {

@@ -26,6 +26,7 @@ const Index: React.FC<{}> = () => {
             },
             {
               name: '旅行者',
+              age: 18,
             },
           )}
         </div>
